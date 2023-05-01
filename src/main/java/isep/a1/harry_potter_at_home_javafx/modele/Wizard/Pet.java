@@ -5,7 +5,7 @@ import java.util.Scanner;
 public enum Pet {
     Owl, Rat, Cat, Toad;
 
-    /*public static Pet assignPet() {
+    public static Pet assignPet() {
         GameMethod myGamemethod= new GameMethod();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select your pet :");
@@ -26,5 +26,5 @@ public enum Pet {
         else {
             return Pet.Rat;
         }
-    }*/
+    }
 }
