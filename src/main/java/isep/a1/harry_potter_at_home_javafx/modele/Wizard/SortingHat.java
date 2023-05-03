@@ -24,7 +24,11 @@ public class SortingHat {
         }
     }*/
 
+    GameMethod mygameMethod= new GameMethod();
+
+
     public House assignHouse() {
+        mygameMethod.setupHouse();
 // Créer les boutons radio
         RadioButton option1 = new RadioButton("Option 1");
         RadioButton option2 = new RadioButton("Option 2");

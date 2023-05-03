@@ -39,7 +39,8 @@ public class Scene1 extends Scene {
         EventHandler<ActionEvent> buttonHandler = event -> {
             if(textField.getText().length() > 0){
                 String playerName = textField.getText();
-                Scene2 scene2 = new Scene2(stage, playerName);
+                Wizard wizard = new Wizard(playerName,100,100,100,null,null,null,null,null);
+                Scene2 scene2 = new Scene2(stage, wizard);
                 stage.setScene(scene2);
             }
         };
