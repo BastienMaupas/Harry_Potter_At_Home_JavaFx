@@ -39,22 +39,24 @@ public class Scene2 extends Scene {
             stage.setScene(scene3);
         });
 
-        /*Image image = new Image("C:\\Users\\babma\\OneDrive\\Documents\\Cours\\ISEP A1\\Java\\Dossiers_image_javafx\\extPoudlard.jpg");
-        BackgroundImage background = new BackgroundImage(image,
-                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false));
-        // Créer un objet Background
-        Background backgroundObj = new Background(background);
-        Scene2.setBackground(backgroundObj);*/
+
+
+
         // Ajoutez les éléments au VBox
         root.getChildren().addAll(label1, backButton, nextButton);
-        root.setStyle("-fx-background-color: #FFFAAA; -fx-font-family: Arial;");
+        root.setStyle("-fx-font-family: Arial;");
+
         root.setPadding(new Insets(20, 20, 20, 20));
         root.setSpacing(20);
         stage.setTitle("Confirm your name - Harry Potter RPG");
-    }
 
-    /*private static void setBackground(Background backgroundObj) {
-    }*/
+        /*Image image = new Image("file:./src/main/java/isep.a1.harry_potter_at_home_javafx/modele/images/extPoudlard.png");
+        BackgroundImage background = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,
+                new BackgroundSize(200,200, true, true, true, true));
+        // Créer un objet Background
+        Background backgroundObj = new Background(background);
+        root.setBackground(backgroundObj);*/
+    }
 
 }

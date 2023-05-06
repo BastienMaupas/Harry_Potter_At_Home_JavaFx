@@ -28,7 +28,7 @@ public class Scene1 extends Scene {
         Label label1 = new Label("What is your name ?");
         //Font fontScene1 = Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 12);
         //label1.setFont(fontScene1);
-        label1.setStyle("-fx-text-fill: white");
+        label1.setStyle("-fx-text-fill: red");
         TextField textField = new TextField();
         textField.setMaxWidth(350);
         textField.setMinHeight(40);
@@ -67,8 +67,6 @@ public class Scene1 extends Scene {
         // Ajoutez les éléments au VBox
         root.getChildren().addAll(label1, textField, hbox);
         root.setStyle("-fx-background-color: #FFFAAA; -fx-font-family: Arial;");
-
-
 
     }
 }

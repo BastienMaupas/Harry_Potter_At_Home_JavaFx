@@ -1,5 +1,6 @@
 package Scenes;
 
+import isep.a1.harry_potter_at_home_javafx.modele.Wizard.GameMethod;
 import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Pet;
 import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Wand.Core;
 import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Wand.Wand;
@@ -27,6 +28,8 @@ public class Scene4 extends Scene {
         super(new VBox(), 600, 300);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
+
+
 
         // Créez les éléments de l'interface utilisateur pour afficher le texte
         Label label1 = new Label("Welcome to Hogwards : " + wizard.getName());
