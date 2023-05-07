@@ -91,7 +91,7 @@ public class Wizard extends Character {
             miss = miss-10;
         }
         if (miss <= spell.getAccuracy()) {
-            int damage = spell.getDamage() * (getAtk() / 5 - character.getDef() / 10) * 1 / 10;
+            int damage = spell.getDamage() * ((getAtk() / 5 - character.getDef() / 10) * 1 / 10);
             if (damage <= 0){
                 damage = 0;
             }

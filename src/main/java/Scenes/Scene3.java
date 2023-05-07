@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Scene3 extends Scene {
     public Scene3(Stage stage, Wizard wizard){
-        super(new VBox(), 600, 300);
+        super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 

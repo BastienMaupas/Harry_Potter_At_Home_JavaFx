@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class Scene7 extends Scene {
     public Scene7(Stage stage, Wizard wizard) {
 
-        super(new VBox(), 600, 300);
+        super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 

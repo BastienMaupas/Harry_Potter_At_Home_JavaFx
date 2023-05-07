@@ -17,7 +17,7 @@ public class Scene2 extends Scene {
     public Scene2(Stage stage, Wizard wizard) {
 
         // Créez la scène avec un VBox comme racine
-        super(new VBox(), 600, 300);
+        super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
@@ -50,13 +50,13 @@ public class Scene2 extends Scene {
         root.setSpacing(20);
         stage.setTitle("Confirm your name - Harry Potter RPG");
 
-        /*Image image = new Image("file:./src/main/java/isep.a1.harry_potter_at_home_javafx/modele/images/extPoudlard.png");
+        /*Image image = new Image("C:\\Users\\babma\\Downloads\\Bastien\\Harry Potter At Home JavaFx\\src\\extPoudlard.png");
         BackgroundImage background = new BackgroundImage(image,
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,
                 new BackgroundSize(200,200, true, true, true, true));
         // Créer un objet Background
         Background backgroundObj = new Background(background);
-        root.setBackground(backgroundObj);*/
+        root.setBackground(backgroundObj); */
     }
 
 }

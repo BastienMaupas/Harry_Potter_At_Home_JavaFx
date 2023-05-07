@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class Scene8 extends Scene {
     public Scene8(Stage stage, Wizard wizard) {
 
-        super(new VBox(), 600, 300);
+        super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
@@ -39,8 +39,8 @@ public class Scene8 extends Scene {
             } else if (selectedOption == option2) {
                 wizard.setDef(wizard.getDef()+10);
             }
-            /*Scene9 scene9 = new Scene5(stage,wizard);
-            stage.setScene(scene9);*/
+            Scene9 scene9 = new Scene9(stage,wizard);
+            stage.setScene(scene9);
         });
 
 // Ajouter les boutons radio et le bouton "Soumettre" à un conteneur

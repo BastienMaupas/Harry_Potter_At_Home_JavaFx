@@ -25,7 +25,7 @@ public class Scene4 extends Scene {
     public Scene4(Stage stage, Wizard wizard) {
 
         // Créez la scène avec un VBox comme racine
-        super(new VBox(), 600, 300);
+        super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
