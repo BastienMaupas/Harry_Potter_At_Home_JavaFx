@@ -59,6 +59,9 @@ public class Scene11 extends Scene {
                 label4.setText("You have dealt "+damage+" damage");
                 label5.setText("You have broken the enemy defense, try now to use an offensive spell");
             }
+
+
+
             submitButton.setVisible(false);
             backButton.setVisible(false);
             nextButton.setVisible(true);
@@ -75,8 +78,17 @@ public class Scene11 extends Scene {
         });
 
         nextButton.setOnAction(event -> {
-            Scene10 scene10 = new Scene10(stage,wizard,troll);
-            stage.setScene(scene10);
+            if (troll.getHp() == 0){
+                Scene14 scene14 = new Scene14(stage,wizard);
+                stage.setScene(scene14);
+            } else if (wizard.getHp() == 0) {
+                Scene100 scene100 = new Scene100(stage,wizard);
+                stage.setScene(scene100);
+            }
+            else {
+                Scene10 scene10 = new Scene10(stage, wizard, troll);
+                stage.setScene(scene10);
+            }
         });
 
         option1.setOnAction(e -> {

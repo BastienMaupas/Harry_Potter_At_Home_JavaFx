@@ -10,14 +10,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Scene13 extends Scene {
-    public Scene13(Stage stage, Wizard wizard, Enemy troll) {
+public class Scene100 extends Scene {
+    public Scene100(Stage stage, Wizard wizard) {
 
         super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
-        Label label1 = new Label("You have surrendered");
+        Label label1 = new Label("You are dead");
 
         Button restartButton = new Button("Restart the game");
 
@@ -31,7 +31,5 @@ public class Scene13 extends Scene {
         root.setPadding(new Insets(20, 20, 20, 20));
         root.setSpacing(20);
         stage.setTitle("Choose your house - Harry Potter RPG");
-
-
     }
 }

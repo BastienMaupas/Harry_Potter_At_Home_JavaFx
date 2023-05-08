@@ -13,15 +13,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Scene10 extends Scene {
-    public Scene10(Stage stage, Wizard wizard, Enemy troll) {
+public class Scene21 extends Scene {
+    public Scene21(Stage stage, Wizard wizard, Enemy basilisk) {
 
         super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
 
-        Label label1 = new Label(troll.getName() + "\nHP: " + troll.getHp() + "/" + troll.maxHp);
+        Label label1 = new Label(basilisk.getName() + "\nHP: " + basilisk.getHp() + "/" + basilisk.maxHp);
         label1.setTextFill(Color.RED);
         Label label2 = new Label("VS");
         Label label3 = new Label(wizard.getName() + "\nHP: " + wizard.getHp() + "/" + wizard.maxHp);
@@ -52,8 +52,8 @@ public class Scene10 extends Scene {
             // Récupérer l'option sélectionnée
             RadioButton selectedOption = (RadioButton) optionsGroup.getSelectedToggle();
             if (selectedOption == option1) {
-                Scene11 scene11 = new Scene11(stage,wizard, troll);
-                stage.setScene(scene11);
+                Scene22 scene22 = new Scene22(stage,wizard, basilisk);
+                stage.setScene(scene22);
             } /*else if (selectedOption == option2) {
                 Scene12 scene12 = new Scene12(stage,wizard, troll);
                 stage.setScene(scene12);
