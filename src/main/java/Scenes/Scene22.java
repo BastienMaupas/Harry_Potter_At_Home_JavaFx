@@ -34,6 +34,7 @@ public class Scene22 extends Scene {
         ToggleGroup optionsGroup = new ToggleGroup();
         option1.setToggleGroup(optionsGroup);
         option2.setToggleGroup(optionsGroup);
+        option3.setToggleGroup(optionsGroup);
 
         Label label2 = new Label();
         Label label4 = new Label();
@@ -81,15 +82,19 @@ public class Scene22 extends Scene {
                     basilisk.setHp(0);
                     label7.setText("You have grabbed the Gryffindor sword, you now can kill the basilisk");
                     label7.setTextFill(Color.ORANGE);
+                    basilisk.setHp(0);
+                    submitButton.setVisible(false);
+                    backButton.setVisible(false);
+                    nextButton.setVisible(true);
                 } else {
                     label4.setText("You have dealt " + damage + " damage");
                     label4.setTextFill(Color.RED);
                     label8.setText("You have grabbed a basilisk's fang, you will now have to survive until you reach the diary to destroy it");
-
+                    submitButton.setVisible(false);
+                    backButton.setVisible(false);
+                    endButton.setVisible(true);
                 }
-                submitButton.setVisible(false);
-                backButton.setVisible(false);
-                endButton.setVisible(true);
+
             }
 
 
@@ -121,6 +126,7 @@ public class Scene22 extends Scene {
 
             label6.setText("The basilisk has dealt you "+damage1+" damage");
             label6.setTextFill(Color.RED);
+            endButton.setVisible(false);
             endButton2.setVisible(true);
         });
 
@@ -137,6 +143,7 @@ public class Scene22 extends Scene {
         endButton2.setOnAction(event -> {
             labelend2.setText("You have reached the diary! You destroy it and it kills the basilisk, you have won!");
             basilisk.setHp(0);
+            endButton2.setVisible(false);
             nextButton.setVisible(true);
         });
 
