@@ -1,41 +1,74 @@
 package Scenes;
 
+import isep.a1.harry_potter_at_home_javafx.modele.Spell.Spell;
 import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Enemy;
+import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Potion;
 import isep.a1.harry_potter_at_home_javafx.modele.Wizard.Wizard;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.util.List;
+import java.util.Objects;
+
 public class Scene23 extends Scene {
-    public Scene23(Stage stage, Wizard wizard) {
+    public Scene23(Stage stage, Wizard wizard, Enemy basilisk) {
 
         super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
-        Label label1 = new Label("END OF LEVEL2");
-        label1.setFont(new Font("Arial", 30));
-        label1.setTextFill(Color.RED);
-        Label label2 = new Label("You won! You can now go rest");
+        Button backButton = new Button("Go back");
+        Button drinkButton = new Button("Drink Potion");
 
-        Button nextButton = new Button("Continue");
+        ToggleGroup potions = new ToggleGroup();
+        for (Potion potion : wizard.getPotionsOwned()) {
+            RadioButton bouton = new RadioButton(potion.getName());
+            bouton.setToggleGroup(potions);
+        }
 
-        nextButton.setOnAction(event -> {
-            //Scene15 scene15 = new Scene15(stage,wizard);
-            //stage.setScene(scene15);
+        for (Potion potion : wizard.getPotionsOwned()) {
+            RadioButton bouton = new RadioButton(potion.getName());
+            bouton.setToggleGroup(potions);
+            root.getChildren().add(bouton);
+        }
+
+        drinkButton.setOnAction(event -> {
+            RadioButton selectedPotionButton = (RadioButton) potions.getSelectedToggle();
+            if (selectedPotionButton != null) {
+                String selectedPotionName = selectedPotionButton.getText();
+                Potion selectedPotion = wizard.getPotionByName(selectedPotionName);
+                if(Objects.equals(wizard.getHouse().getName(), "Hufflepuff")) {
+                    wizard.setHp(wizard.getHp() + selectedPotion.getHp() + 10);
+                    System.out.println("You have been healed by "+ (selectedPotion.getHp())+" plus 10 additional hp beacause you are Hufflepuff");
+                }else{
+                    wizard.setHp(wizard.getHp() + selectedPotion.getHp());
+                    System.out.println("You have been healed by "+ selectedPotion.getHp());
+                }
+                List<Potion> ownedPotions = wizard.getPotionsOwned();
+                ownedPotions.remove(selectedPotion);
+                wizard.setPotionsOwned(ownedPotions);
+                if (wizard.getHp() >= 100){
+                    wizard.setHp(100);
+                }
+                Scene21 scene21 = new Scene21(stage,wizard,basilisk);
+                stage.setScene(scene21);
+            }
         });
 
-        root.getChildren().addAll(label1, label2, nextButton);
-        root.setStyle("-fx-background-color: #FFFAAA; -fx-font-family: Arial;");
-        root.setPadding(new Insets(20, 20, 20, 20));
-        root.setSpacing(20);
-        stage.setTitle("Choose your house - Harry Potter RPG");
+        backButton.setOnAction(event -> {
+            Scene21 scene21 = new Scene21(stage,wizard,basilisk);
+            stage.setScene(scene21);
+        });
+
+        root.getChildren().addAll(backButton, drinkButton);
+
+
 
     }
 }

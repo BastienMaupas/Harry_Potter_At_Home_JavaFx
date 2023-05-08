@@ -29,7 +29,7 @@ public class Scene10 extends Scene {
         if (wizard.getHp() >= 65){
             label3.setTextFill(Color.GREEN);
         } else if (64 >= wizard.getHp() && wizard.getHp() >= 32){
-            label3.setTextFill(Color.YELLOW);
+            label3.setTextFill(Color.ORANGE);
         } else if (wizard.getHp() <= 31){
             label3.setTextFill(Color.RED);
         }
@@ -54,10 +54,10 @@ public class Scene10 extends Scene {
             if (selectedOption == option1) {
                 Scene11 scene11 = new Scene11(stage,wizard, troll);
                 stage.setScene(scene11);
-            } /*else if (selectedOption == option2) {
+            } else if (selectedOption == option2) {
                 Scene12 scene12 = new Scene12(stage,wizard, troll);
                 stage.setScene(scene12);
-            } */ else if (selectedOption == option3) {
+            } else if (selectedOption == option3) {
                 Scene200 scene200 = new Scene200(stage,wizard);
                 stage.setScene(scene200);
             }

@@ -127,6 +127,15 @@ public class Wizard extends Character {
         setHp(getHp()-damage);
     }
 
+    public Potion getPotionByName(String name) {
+        for (Potion potion : getPotionsOwned()) {
+            if (potion.getName().equals(name)) {
+                return potion;
+            }
+        }
+        return null; // Ou lancez une exception si aucune potion avec ce nom n'est trouvée
+    }
+
     public static boolean defend(){
 
         Scanner scanner = new Scanner(System.in);

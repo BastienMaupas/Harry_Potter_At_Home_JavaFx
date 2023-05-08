@@ -13,15 +13,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Scene21 extends Scene {
-    public Scene21(Stage stage, Wizard wizard, Enemy basilisk) {
+public class Scene31 extends Scene {
+    public Scene31(Stage stage, Wizard wizard, Enemy dementors) {
 
         super(new VBox(), 600, 600);
         VBox root = (VBox) getRoot();
         root.setAlignment(Pos.CENTER);
 
 
-        Label label1 = new Label(basilisk.getName() + "\nHP: " + basilisk.getHp() + "/" + basilisk.maxHp);
+        Label label1 = new Label(dementors.getName() + "\nHP: " + dementors.getHp() + "/" + dementors.maxHp);
         label1.setTextFill(Color.RED);
         Label label2 = new Label("VS");
         Label label3 = new Label(wizard.getName() + "\nHP: " + wizard.getHp() + "/" + wizard.maxHp);
@@ -52,14 +52,14 @@ public class Scene21 extends Scene {
             // Récupérer l'option sélectionnée
             RadioButton selectedOption = (RadioButton) optionsGroup.getSelectedToggle();
             if (selectedOption == option1) {
-                Scene22 scene22 = new Scene22(stage,wizard, basilisk);
-                stage.setScene(scene22);
-            } else if (selectedOption == option2) {
-                Scene23 scene23 = new Scene23(stage,wizard, basilisk);
-                stage.setScene(scene23);
-            } else if (selectedOption == option3) {
-                Scene200 scene200 = new Scene200(stage,wizard);
-                stage.setScene(scene200);
+                //Scene22 scene22 = new Scene22(stage,wizard, dementors);
+                //stage.setScene(scene22);
+            } /*else if (selectedOption == option2) {
+                Scene12 scene12 = new Scene12(stage,wizard, troll);
+                stage.setScene(scene12);
+            } */ else if (selectedOption == option3) {
+                //Scene200 scene200 = new Scene200(stage,wizard);
+                //stage.setScene(scene200);
             }
 
         });

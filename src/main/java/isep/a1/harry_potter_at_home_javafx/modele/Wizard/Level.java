@@ -27,7 +27,7 @@ public class Level {
     public void level2(){
         /* Level 2 */
 
-        mygameMethod.addPotion(Potion.setupPotions().get(1));
+        mygameMethod.addPotion(mygameMethod.setupPotions().get(1));
         mygameMethod.place = 1;
         mygameMethod.gameLoop();
         mygameMethod.learnSpell(mygameMethod.setupSpells().get(3));
@@ -63,7 +63,7 @@ public class Level {
     public void level4(){
         /* Level 4 */
 
-        mygameMethod.addPotion(Potion.setupPotions().get(1));
+        mygameMethod.addPotion(mygameMethod.setupPotions().get(1));
         mygameMethod.place = 3;
         mygameMethod.chooseUpgrade(wizard);
         mygameMethod.learnSpell(mygameMethod.setupSpells().get(2));
@@ -85,7 +85,7 @@ public class Level {
     public void level5(){
         /* Level 5 */
 
-        mygameMethod.addPotion(Potion.setupPotions().get(2));
+        mygameMethod.addPotion(mygameMethod.setupPotions().get(2));
         mygameMethod.place = 4;
         mygameMethod.chooseUpgrade(wizard);
         mygameMethod.learnSpell(mygameMethod.setupSpells().get(5));
@@ -107,7 +107,7 @@ public class Level {
     public void level6(){
         /* Level 6 */
 
-        mygameMethod.addPotion(Potion.setupPotions().get(2));
+        mygameMethod.addPotion(mygameMethod.setupPotions().get(2));
         mygameMethod.place = 5;
         mygameMethod.chooseUpgrade(wizard);
         mygameMethod.learnSpell(mygameMethod.setupSpells().get(6));
@@ -133,7 +133,7 @@ public class Level {
     public void level7(){
         /* Level 7 */
 
-        mygameMethod.addPotion(Potion.setupPotions().get(2));
+        mygameMethod.addPotion(mygameMethod.setupPotions().get(2));
         mygameMethod.place = 6;
         mygameMethod.chooseUpgrade(wizard);
         mygameMethod.gameLoop();

@@ -56,6 +56,15 @@ public class GameMethod {
         scanner.next();
     }
 
+    public List<Potion> setupPotions(){
+        List<Potion> potions = new ArrayList<>();
+        potions.add(new Potion("Common Potion", 20));
+        potions.add(new Potion("Rare Potion", 40));
+        potions.add(new Potion("Legendary Potion", 60));
+
+        return potions;
+    }
+
     public List<Spell> setupSpells(){
         List<Spell> spells = new ArrayList<>();
         spells.add(new Spell("Expelliarmus",90, "Deal a small amount of damage but has a high accuracy", 20));
@@ -103,8 +112,8 @@ public class GameMethod {
 
     public void potionsOwned(){
         List<Potion> ownedPotions = new ArrayList<>();
-        ownedPotions.add(Potion.setupPotions().get(0));
-        ownedPotions.add(Potion.setupPotions().get(0));
+        ownedPotions.add(setupPotions().get(0));
+        ownedPotions.add(setupPotions().get(0));
         /*ownedPotions.add(Potion.setupPotions().get(1));*/
         wizard.setPotionsOwned(ownedPotions);
     }
@@ -162,7 +171,7 @@ public class GameMethod {
         }
         anythingToContinue();
         spellsKnown();
-        Potion.setupPotions();
+        setupPotions();
         potionsOwned();
 
         System.out.println("Your name is " + wizard.name + ", your house is " + wizard.getHouse().getName() + ", your pet is a " + wizard.getPet() + ", your wand is made of " + wand.getCore() + " and its size is " + wand.getSize() + "cm");

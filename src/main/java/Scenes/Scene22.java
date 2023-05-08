@@ -154,8 +154,8 @@ public class Scene22 extends Scene {
 
         nextButton.setOnAction(event -> {
             if (basilisk.getHp() == 0){
-                Scene23 scene23 = new Scene23(stage,wizard);
-                stage.setScene(scene23);
+                Scene24 scene24 = new Scene24(stage,wizard);
+                stage.setScene(scene24);
             } else if (wizard.getHp() == 0) {
                 Scene100 scene100 = new Scene100(stage,wizard);
                 stage.setScene(scene100);

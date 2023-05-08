@@ -39,7 +39,7 @@ public class Scene4 extends Scene {
         } else if (Objects.equals(wizard.getHouse().getName(), "Gryffindor")){
             label2.setTextFill(Color.RED);
         } else if (Objects.equals(wizard.getHouse().getName(), "Hufflepuff")){
-            label2.setTextFill(Color.YELLOW);
+            label2.setTextFill(Color.ORANGE);
         } else if (Objects.equals(wizard.getHouse().getName(), "Ravenclaw")){
             label2.setTextFill(Color.BLUE);
         }

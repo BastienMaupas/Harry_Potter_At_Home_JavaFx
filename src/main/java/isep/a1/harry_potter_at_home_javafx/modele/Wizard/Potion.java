@@ -42,14 +42,5 @@ public class Potion {
         }
     }
 
-    public static List<Potion> setupPotions(){
-        List<Potion> potions = new ArrayList<>();
-        potions.add(new Potion("Common Potion", 20));
-        potions.add(new Potion("Rare Potion", 40));
-        potions.add(new Potion("Legendary Potion", 60));
-
-        return potions;
-    }
-
 }
 

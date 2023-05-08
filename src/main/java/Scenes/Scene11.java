@@ -78,10 +78,10 @@ public class Scene11 extends Scene {
         });
 
         nextButton.setOnAction(event -> {
-            if (troll.getHp() == 0){
+            if (troll.getHp() <= 0){
                 Scene14 scene14 = new Scene14(stage,wizard);
                 stage.setScene(scene14);
-            } else if (wizard.getHp() == 0) {
+            } else if (wizard.getHp() <= 0) {
                 Scene100 scene100 = new Scene100(stage,wizard);
                 stage.setScene(scene100);
             }
