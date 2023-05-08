@@ -54,8 +54,10 @@ public class Scene3 extends Scene {
                 } else if (selectedOption == option4) {
                     wizard.setHouse(mygameMethod.setupHouse().get(3));
                 }
-            Scene4 scene4 = new Scene4(stage,wizard);
-            stage.setScene(scene4);
+            if (selectedOption != null) {
+                Scene4 scene4 = new Scene4(stage, wizard);
+                stage.setScene(scene4);
+            }
         });
 
 // Ajouter les boutons radio et le bouton "Soumettre" à un conteneur

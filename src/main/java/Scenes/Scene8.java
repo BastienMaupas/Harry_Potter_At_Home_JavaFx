@@ -39,8 +39,10 @@ public class Scene8 extends Scene {
             } else if (selectedOption == option2) {
                 wizard.setDef(wizard.getDef()+10);
             }
-            Scene9 scene9 = new Scene9(stage,wizard);
-            stage.setScene(scene9);
+            if (selectedOption != null) {
+                Scene9 scene9 = new Scene9(stage, wizard);
+                stage.setScene(scene9);
+            }
         });
 
 // Ajouter les boutons radio et le bouton "Soumettre" à un conteneur

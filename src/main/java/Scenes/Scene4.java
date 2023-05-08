@@ -78,8 +78,10 @@ public class Scene4 extends Scene {
             } else if (selectedOption == option4) {
                 wizard.setPet(Pet.Toad);
             }
-            Scene5 scene5 = new Scene5(stage,wizard);
-            stage.setScene(scene5);
+            if (selectedOption != null) {
+                Scene5 scene5 = new Scene5(stage, wizard);
+                stage.setScene(scene5);
+            }
         });
 
         // Ajoutez les éléments au VBox

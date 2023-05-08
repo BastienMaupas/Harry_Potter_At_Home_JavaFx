@@ -61,15 +61,16 @@ public class Scene11 extends Scene {
             }
 
 
+            if (selectedOption != null) {
+                submitButton.setVisible(false);
+                backButton.setVisible(false);
+                nextButton.setVisible(true);
+                int damage1 = troll.attack1(wizard);
+                wizard.takeDamage(damage1);
 
-            submitButton.setVisible(false);
-            backButton.setVisible(false);
-            nextButton.setVisible(true);
-            int damage1 = troll.attack1(wizard);
-            wizard.takeDamage(damage1);
-
-            label6.setText("The troll has dealt you "+damage1+" damage");
-            label6.setTextFill(Color.RED);
+                label6.setText("The troll has dealt you " + damage1 + " damage");
+                label6.setTextFill(Color.RED);
+            }
         });
 
         backButton.setOnAction(event -> {
